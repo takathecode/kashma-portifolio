@@ -1836,3 +1836,16 @@ a.contact-value:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Para a imagem de destaque */
+.featured-img {
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.featured-card:hover .featured-img {
+    transform: scale(1.05);
+}
