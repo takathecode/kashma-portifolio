@@ -555,6 +555,10 @@ img {
     transform: translateX(5px);
 }
 
+.btn-full {
+    width: 100%;
+}
+
 /* Hero Visual */
 .hero-visual {
     display: none;
@@ -1848,4 +1852,16 @@ a.contact-value:hover {
 
 .featured-card:hover .featured-img {
     transform: scale(1.05);
+}
+
+/* Ajuste responsivo para o título do projeto */
+.project-name {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+    .project-name {
+        font-size: 1.1rem;
+    }
 }

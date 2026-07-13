@@ -1,4 +1,4 @@
-// script.js - Kashma Portfolio Site - VERSÃO CORRIGIDA
+// script.js - Kashma Portfolio Site - VERSÃO CORRIGIDA COM WHATSAPP
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Menu Toggle
@@ -116,29 +116,64 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', updateActiveNavLink);
     updateActiveNavLink();
     
-    // Form submission handling
+    // =========================================
+    // FORM CONTATO - ENVIO PARA WHATSAPP
+    // =========================================
     const contactForm = document.getElementById('contactForm');
+    
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+            e.preventDefault(); // Impede o envio tradicional do formulário
             
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
+            // 1. Capturar os dados do formulário
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const interestSelect = document.getElementById('interest');
+            const interest = interestSelect.options[interestSelect.selectedIndex]?.text || 'Não especificado';
+            const message = document.getElementById('message').value.trim();
             
-            console.log('Form submitted:', data);
+            // 2. Validar se os campos obrigatórios estão preenchidos
+            if (!name || !email || !message || interest === 'Não especificado') {
+                alert('Por favor, preencha todos os campos corretamente.');
+                return;
+            }
             
+            // 3. Montar a mensagem formatada para o WhatsApp
+            const phoneNumber = '5511951625108'; // Número da Kashma (sem o +)
+            
+            const whatsappMessage = 
+                `Olá, equipe Kashma! 👋\n\n` +
+                `Meu nome é *${name}*.\n` +
+                `Meu e-mail é: ${email}\n\n` +
+                `*Interesse:* ${interest}\n\n` +
+                `*Sobre o projeto:*\n${message}\n\n` +
+                `Aguardo o retorno de vocês! 🚀`;
+            
+            // 4. Codificar a mensagem para URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // 5. Montar a URL do WhatsApp
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            
+            // 6. Abrir o WhatsApp em uma nova aba/janela
+            window.open(whatsappUrl, '_blank');
+            
+            // 7. (Opcional) Feedback visual para o usuário
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             
-            submitBtn.innerHTML = '<span class="btn-text">Enviado!</span><span class="btn-icon">✓</span>';
-            submitBtn.style.background = 'linear-gradient(135deg, #00C851 0%, #007E33 100%)';
+            // Muda o texto do botão temporariamente
+            submitBtn.innerHTML = '<span class="btn-text">Abrindo WhatsApp...</span><span class="btn-icon">📱</span>';
+            submitBtn.style.background = 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)';
             
-            this.reset();
+            // Limpa o formulário (opcional)
+            // this.reset();
             
+            // Restaura o botão após 4 segundos
             setTimeout(() => {
                 submitBtn.innerHTML = originalText;
                 submitBtn.style.background = '';
-            }, 3000);
+            }, 4000);
         });
     }
     
