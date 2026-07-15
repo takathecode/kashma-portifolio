@@ -1,4 +1,4 @@
-// script.js - Kashma Portfolio Site - VERSÃO CORRIGIDA COM WHATSAPP
+// script.js - Kashma Portfolio Site - FORMULÁRIO COMPLETO COM WHATSAPP DIRETO
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Menu Toggle
@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
             body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
         });
         
-        // Close menu when clicking a link
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (navMenu.classList.contains('active') && 
                 !navMenu.contains(e.target) && 
@@ -46,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 behavior: 'smooth'
             });
             
-            // Close mobile menu if open
             if (navMenu && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
                 if (mobileMenuBtn) {
@@ -92,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add active class to nav links based on scroll position
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks2 = document.querySelectorAll('.nav-link');
     
     function updateActiveNavLink() {
         const scrollPosition = window.scrollY + 100;
@@ -103,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionId = section.getAttribute('id');
             
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                navLinks.forEach(link => {
+                navLinks2.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === `#${sectionId}`) {
                         link.classList.add('active');
@@ -117,63 +114,152 @@ document.addEventListener('DOMContentLoaded', function() {
     updateActiveNavLink();
     
     // =========================================
-    // FORM CONTATO - ENVIO PARA WHATSAPP
+    // FORM CONTATO - ENVIO DIRETO PARA WHATSAPP
     // =========================================
     const contactForm = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+    const backToFormBtn = document.getElementById('backToFormBtn');
+    const whatsappExpertBtn = document.getElementById('whatsappExpertBtn');
+    
+    // Função para mostrar mensagem de sucesso
+    function showSuccessMessage() {
+        contactForm.style.display = 'none';
+        successMessage.style.display = 'block';
+        successMessage.style.animation = 'none';
+        setTimeout(() => {
+            successMessage.style.animation = 'fadeInUp 0.6s ease forwards';
+        }, 10);
+    }
+    
+    // Função para voltar ao formulário
+    function backToForm() {
+        successMessage.style.display = 'none';
+        contactForm.style.display = 'flex';
+        // Resetar o botão de submit
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        if (submitBtn) {
+            submitBtn.innerHTML = '<span class="btn-text">Enviar Solicitação</span><span class="btn-icon">→</span>';
+            submitBtn.style.background = '';
+            submitBtn.disabled = false;
+        }
+    }
+    
+    // Evento de voltar ao formulário
+    if (backToFormBtn) {
+        backToFormBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            backToForm();
+            const formContainer = document.querySelector('.contact-form-container');
+            if (formContainer) {
+                formContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    }
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Impede o envio tradicional do formulário
+            e.preventDefault();
             
-            // 1. Capturar os dados do formulário
+            // 1. Capturar todos os dados do formulário
             const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const interestSelect = document.getElementById('interest');
-            const interest = interestSelect.options[interestSelect.selectedIndex]?.text || 'Não especificado';
+            const company = document.getElementById('company').value.trim();
+            const segment = document.getElementById('segment').value.trim();
+            
+            const needSelect = document.getElementById('need');
+            const need = needSelect.options[needSelect.selectedIndex]?.text || 'Não especificado';
+            
+            const hasWebsiteSelect = document.getElementById('hasWebsite');
+            const hasWebsite = hasWebsiteSelect.options[hasWebsiteSelect.selectedIndex]?.text || 'Não informado';
+            
+            const budgetSelect = document.getElementById('budget');
+            const budget = budgetSelect.options[budgetSelect.selectedIndex]?.text || 'Não especificado';
+            
             const message = document.getElementById('message').value.trim();
             
-            // 2. Validar se os campos obrigatórios estão preenchidos
-            if (!name || !email || !message || interest === 'Não especificado') {
-                alert('Por favor, preencha todos os campos corretamente.');
+            // 2. Validar campos obrigatórios
+            if (!name) {
+                alert('Por favor, preencha seu nome.');
+                document.getElementById('name').focus();
                 return;
             }
             
-            // 3. Montar a mensagem formatada para o WhatsApp
-            const phoneNumber = '5511951625108'; // Número da Kashma (sem o +)
+            if (need === 'Não especificado' || !needSelect.value) {
+                alert('Por favor, selecione o que você precisa.');
+                document.getElementById('need').focus();
+                return;
+            }
             
-            const whatsappMessage = 
-                `Olá, equipe Kashma! 👋\n\n` +
-                `Meu nome é *${name}*.\n` +
-                `Meu e-mail é: ${email}\n\n` +
-                `*Interesse:* ${interest}\n\n` +
-                `*Sobre o projeto:*\n${message}\n\n` +
-                `Aguardo o retorno de vocês! 🚀`;
+            if (budget === 'Não especificado' || !budgetSelect.value) {
+                alert('Por favor, selecione seu orçamento estimado.');
+                document.getElementById('budget').focus();
+                return;
+            }
             
-            // 4. Codificar a mensagem para URL
-            const encodedMessage = encodeURIComponent(whatsappMessage);
+            if (!message) {
+                alert('Por favor, descreva seu projeto.');
+                document.getElementById('message').focus();
+                return;
+            }
             
-            // 5. Montar a URL do WhatsApp
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-            
-            // 6. Abrir o WhatsApp em uma nova aba/janela
-            window.open(whatsappUrl, '_blank');
-            
-            // 7. (Opcional) Feedback visual para o usuário
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            // Muda o texto do botão temporariamente
-            submitBtn.innerHTML = '<span class="btn-text">Abrindo WhatsApp...</span><span class="btn-icon">📱</span>';
+            // 3. Desabilitar o botão para evitar múltiplos envios
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="btn-text">Abrindo WhatsApp...</span><span class="btn-icon">⏳</span>';
             submitBtn.style.background = 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)';
             
-            // Limpa o formulário (opcional)
-            // this.reset();
+            // 4. Montar a mensagem formatada para o WhatsApp
+            const phoneNumber = '5511951466847';
             
-            // Restaura o botão após 4 segundos
+            let whatsappMessage = `Olá, equipe Kashma!\n\n`;
+            whatsappMessage += `*Nova solicitação de orçamento*\n\n`;
+            whatsappMessage += `*Nome:* ${name}\n`;
+            
+            if (company) {
+                whatsappMessage += `*Empresa:* ${company}\n`;
+            }
+            
+            if (segment) {
+                whatsappMessage += `*Segmento:* ${segment}\n`;
+            }
+            
+            whatsappMessage += `*O que precisa?:* ${need}\n`;
+            whatsappMessage += `*Já possui site?:* ${hasWebsite}\n`;
+            whatsappMessage += `*Orçamento estimado:* ${budget}\n\n`;
+            whatsappMessage += `*Descrição do projeto:*\n${message}\n\n`;
+            whatsappMessage += `Aguardo o retorno de vocês!`;
+            
+            // 5. Codificar a mensagem para URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // 6. Montar a URL do WhatsApp
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            
+            // 7. Atualizar o link do botão "Falar com Especialista"
+            if (whatsappExpertBtn) {
+                whatsappExpertBtn.href = whatsappUrl;
+            }
+            
+            // 8. ABRIR O WHATSAPP DIRETO EM NOVA ABA
+            window.open(whatsappUrl, '_blank');
+            
+            // 9. Mostrar mensagem de sucesso
             setTimeout(() => {
-                submitBtn.innerHTML = originalText;
+                showSuccessMessage();
+                // Scroll para ver a mensagem de sucesso
+                const formContainer = document.querySelector('.contact-form-container');
+                if (formContainer) {
+                    formContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }, 500);
+            
+            // 10. Limpar o formulário (opcional - após abrir o WhatsApp)
+            setTimeout(() => {
+                contactForm.reset();
+                // Restaurar o botão (já que o formulário foi resetado)
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span class="btn-text">Enviar Solicitação</span><span class="btn-icon">→</span>';
                 submitBtn.style.background = '';
-            }, 4000);
+            }, 1000);
         });
     }
     
