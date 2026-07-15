@@ -192,3 +192,41 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('%cKASHMA • カシマ • Tecnologia de Precisão', 'font-family: Orbitron, sans-serif; font-size: 14px; font-weight: bold; color: #00E5FF; text-shadow: 0 0 10px #00E5FF;');
 });
+
+
+// =========================================
+// SUBMENU FUNCTIONS
+// =========================================
+function openSubmenu(type) {
+    // Fecha qualquer submenu aberto
+    closeAllSubmenus();
+    
+    // Abre o submenu específico
+    const modal = document.getElementById('submenu' + type.charAt(0).toUpperCase() + type.slice(1));
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeSubmenu(type) {
+    const modal = document.getElementById('submenu' + type.charAt(0).toUpperCase() + type.slice(1));
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+function closeAllSubmenus() {
+    document.querySelectorAll('.submenu-modal').forEach(modal => {
+        modal.classList.remove('active');
+    });
+    document.body.style.overflow = '';
+}
+
+// Fechar com tecla ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeAllSubmenus();
+    }
+});
