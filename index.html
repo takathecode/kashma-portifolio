@@ -1,439 +1,699 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Kashma - Desenvolvimento de CRMs, SaaS, Apps e Landing Pages de alta performance">
-    <meta name="theme-color" content="#0A0A0C">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+    <meta
+      name="description"
+      content="Kashma - Desenvolvimento de CRMs, SaaS, Apps e Landing Pages de alta performance"
+    />
+    <meta name="theme-color" content="#0A0A0C" />
     <title>Kashma | Tecnologia de Precisão</title>
-    
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- Header -->
     <header class="header">
-        <div class="container header-container">
-            <div class="logo-container">
-                <a href="#" class="logo-link" aria-label="Kashma - Voltar ao início">
-                    <div class="kashma-logo">
-                        <div class="logo-mark">
-                            <span class="k-icon">K</span>
-                            <div class="accent-dot blue"></div>
-                            <div class="accent-dot red"></div>
-                        </div>
-                        <div class="logo-text">
-                            <span class="company-name">KASHMA</span>
-                            <span class="katakana">カシマ</span>
-                        </div>
-                    </div>
-                </a>
+      <div class="container header-container">
+        <div class="logo-container">
+          <!-- Logo Kashma (simulando a estética da image_0.png) -->
+          <a href="#" class="logo-link" aria-label="Kashma - Voltar ao início">
+            <div class="kashma-logo">
+              <div class="logo-mark">
+                <span class="k-icon">K</span>
+                <div class="accent-dot blue"></div>
+                <div class="accent-dot red"></div>
+              </div>
+              <div class="logo-text">
+                <span class="company-name">KASHMA</span>
+                <span class="katakana">カシマ</span>
+              </div>
             </div>
-            
-            <nav class="nav-menu" id="navMenu">
-                <ul class="nav-list">
-                    <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
-                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
-                    <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
-                </ul>
-            </nav>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+          </a>
         </div>
+
+        <nav class="nav-menu" id="navMenu">
+          <ul class="nav-list">
+            <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+            <li><a href="#servicos" class="nav-link">Serviços</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+            <li><a href="#contato" class="nav-link">Contato</a></li>
+          </ul>
+        </nav>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero" id="sobre">
-            <div class="hero-backdrop"></div>
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <span class="badge-line"></span>
-                        <br><br><span class="badge-text">DESENVOLVIMENTO DE ELITE</span>
-                    </div>
-                    
-                    <h1 class="hero-title">
-                        <span class="title-gradient">KASHMA:</span>
-                        <span class="title-white">Elevando o Potencial</span>
-                        <span class="title-accent">com Tecnologia de Precisão</span>
-                    </h1>
-                    
-                    <p class="hero-subtitle">
-                        Desenvolvemos soluções digitais de alto impacto para negócios que exigem performance.
-                    </p>
-                    
-                    <p class="hero-description">
-                       Somos uma equipe que está pronta para atender e solucionar problemas da sua empresa, que muitas vezes são fatores determinantes entre vender ou não, crescer ou não, se inovar ou não... Com sistemas de automação eficientes, apps para auxiliar no desempenho, lading pages responsivas e muito mais, nós podemos te ajudar a impulsionar seu negócio. Vamos lá, explore esse pequeno portifólio, e se gostar entre em contato conosco :)
-                    </p>
-                    
-                    <div class="hero-actions">
-                        <a href="#portfolio" class="btn btn-primary btn-angular">
-                            <span class="btn-text">Conheça Nosso Trabalho</span>
-                            <span class="btn-icon">→</span>
-                        </a>
-                        <a href="#contato" class="btn btn-outline btn-angular">
-                            <span class="btn-text">Fale Conosco</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="hero-visual">
-                    <div class="tech-grid">
-                        <div class="grid-line"></div>
-                        <div class="grid-line"></div>
-                        <div class="grid-line"></div>
-                        <div class="glow-orb blue"></div>
-                        <div class="glow-orb red"></div>
-                    </div>
-                </div>
+      <!-- Hero Section -->
+      <section class="hero" id="sobre">
+        <div class="hero-backdrop"></div>
+        <div class="container hero-container">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge-line"></span>
+              <br /><br /><span class="badge-text"
+                >DESENVOLVIMENTO DE ELITE</span
+              >
             </div>
-            
-            <div class="scroll-indicator">
-                <div class="scroll-line"></div>
-            </div>
-        </section>
 
-        <!-- Serviços Section -->
-        <section class="services" id="servicos">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <span class="title-line"></span>
-                        Nossas Soluções de Performance
-                        <span class="title-line"></span>
-                    </h2>
-                    <p class="section-subtitle">Tecnologia de ponta para cada desafio do seu negócio</p>
-                </div>
-                
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="card-icon">
-                            <i class="fas fa-database"></i>
-                            <div class="icon-glow"></div>
-                        </div>
-                        <h3 class="card-title">Sistemas CRM Personalizados</h3>
-                        <p class="card-description">
-                            Gestão inteligente de dados e relacionamentos com pipelines 
-                            visuais adaptados ao seu fluxo de vendas.
-                        </p>
-                        <div class="card-accent"></div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="card-icon">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                            <div class="icon-glow"></div>
-                        </div>
-                        <h3 class="card-title">Plataformas SaaS Escaláveis</h3>
-                        <p class="card-description">
-                            Soluções em nuvem preparadas para alto volume de requisições 
-                            e crescimento exponencial.
-                        </p>
-                        <div class="card-accent"></div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="card-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                            <div class="icon-glow"></div>
-                        </div>
-                        <h3 class="card-title">Aplicativos de Alto Desempenho</h3>
-                        <p class="card-description">
-                            UX/UI premium em plataformas nativas e híbridas com 
-                            performance excepcional.
-                        </p>
-                        <div class="card-accent"></div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="card-icon">
-                            <i class="fas fa-rocket"></i>
-                            <div class="icon-glow"></div>
-                        </div>
-                        <h3 class="card-title">Landing Pages Otimizadas</h3>
-                        <p class="card-description">
-                            Design técnico e persuasivo focado em métricas de negócio 
-                            e conversão máxima.
-                        </p>
-                        <div class="card-accent"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <h1 class="hero-title">
+              <span class="title-gradient">KASHMA:</span>
+              <span class="title-white">Elevando o Potencial</span>
+              <span class="title-accent">com Tecnologia de Precisão</span>
+            </h1>
 
-        <!-- Desenvolvedores Section -->
-        <section class="developers" id="desenvolvedores">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <span class="title-line"></span>
-                        Os Arquitetos da Sua Visão
-                        <span class="title-line"></span>
-                    </h2>
-                    <p class="section-subtitle">Expertise técnica e visão estratégica unidas</p>
-                </div>
-                
-                <div class="developers-grid">
-                    <div class="developer-card">
-                        <div class="dev-image-container">
-                            <div class="dev-image">
-                                <img src="./img/foto felippe.jpeg" alt="Felippe Takahashi" class="dev-photo">
-                                <div class="image-overlay"></div>
-                            </div>
-                            <div class="dev-glow blue"></div>
-                        </div>
-                        <div class="dev-info">
-                            <h3 class="dev-name">Felippe Takahashi</h3>
-                            <p class="dev-role">Web Developer & Back-end</p>
-                            <p class="dev-bio">
-                               Focado em transformar complexidade técnica em interfaces 
-                                fluidas e memoráveis. Felippe se aprimorou durante 2 anos no SENAI em desenvolvimento de sistemas e agora está pronto para resolver problemas e construir soluções digitais.
-                            </p>
-                            <div class="dev-skills">
-                                <span class="skill-tag">Node.js</span>
-                                <span class="skill-tag">Figma</span>
-                                <span class="skill-tag">MySQL</span>
-                                <span class="skill-tag">AZ-900</span>
-                            </div>
-                        </div>
-                    </div>
-                        
-                    <div class="developer-card">
-                        <div class="dev-image-container">
-                            <div class="dev-image">
-                                <img src="./img/gustavo-img.png" alt="Gustavo Machado" class="dev-photo">
-                                <div class="image-overlay"></div>
-                            </div>
-                            <div class="dev-glow red"></div>
-                        </div>
-                        <div class="dev-info">
-                            <h3 class="dev-name">Gustavo Machado</h3>
-                            <p class="dev-role">Full Stack Developer</p>
-                            <p class="dev-bio">
-                                 Crio soluções web funcionais, bem estruturadas e focadas em resultado. Trabalho com Python e JavaScript, desenvolvendo sistemas eficientes e integrações práticas. Tenho experiência com MySQL e aplico boas práticas de cibersegurança para garantir dados seguros e aplicações confiáveis.
-                            </p>
-                            <div class="dev-skills">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">N8N</span>
-                                <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">AZ-900</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <p class="hero-subtitle">
+              Desenvolvemos soluções digitais de alto impacto para negócios que
+              exigem performance.
+            </p>
 
-        <!-- Portfolio Section -->
-        <section class="portfolio" id="portfolio">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <span class="title-line"></span>
-                        Portfólio de Inovação
-                        <span class="title-line"></span>
-                    </h2>
-                    <p class="section-subtitle">Cases que redefinem o padrão de excelência técnica</p>
-                </div>
-                
-                <div class="featured-card" id="featured1">
-                    <div class="featured-image">
-                        <img src="./img/estudio-tatuagem.png" alt="Site Estúdio de Tatuagem" class="featured-img">
-                        <div class="featured-badge">Premium</div>
-                    </div>
-                    <div class="featured-content">
-                        <h3 class="featured-title">Site institucional para Estúdio de Tatuagens</h3>
-                        <p class="featured-description">
-                            Um site institucional <strong>Premium</strong> para estúdios de tatuagens, que buscam um aumento em suas vendas e clientes.
-                        </p>
-                        <div class="featured-stats">
-                            <div class="stat-item">
-                                <span class="stat-value">100%</span>
-                                <span class="stat-label">Responsivo</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-value">Timeline</span>
-                                <span class="stat-label">Otimizada</span>
-                            </div>
-                        </div>
-                        <a href="https://takathecode.github.io/estudio_tatuagem_base/" class="featured-link" target="_blank">
-                            Ver Site
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="all-projects">
-                    <h3 class="projects-grid-title">Todos os Projetos</h3>
-                    
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <div class="project-thumb">
-                                <img src="./img/foto-dentista.png" alt="Landing Page Consultório" loading="lazy">
-                            </div>
-                            <div class="project-info">
-                                <h4 class="project-name">Landing page para você doutor que deseja aumentar seus pacientes</h4>
-                                <a href="https://takathecode.github.io/consutorio-base/" class="featured-link" target="_blank">Ver site <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card">
-                            <div class="project-thumb">
-                                <img src="./img/pizzaria-img.png" alt="Lading page pizzaria" loading="lazy">
-                            </div>
-                            <div class="project-info">
-                                <h4 class="project-name">Uma pizzaria digital, que de maneira controlada e organizada, aumenta suas vendas</h4>
-                                <a href="https://takathecode.github.io/pizzaria-base/" class="featured-link" target="_blank">Ver site <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card">
-                            <div class="project-thumb">
-                                <img src="./img/barbearia-foto.png" alt="Sistema Barbearia" loading="lazy">
-                            </div>
-                            <div class="project-info">
-                                <h4 class="project-name">Um sistema completo de barbearia para você empreendedor que busca organização e facilidade</h4>
-                                <a href="https://gustavo-machado264.github.io/barbearia-teste/" class="featured-link" target="_blank">Ver site <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card">
-                            <div class="project-thumb">
-                                <img src="./img/studio bella foto.png" alt="Site Clínica de Estética" loading="lazy">
-                            </div>
-                            <div class="project-info">
-                                <h4 class="project-name">Uma clínica de estética que conquista suas clientes</h4>
-                                <a href="https://gustavo-machado264.github.io/clinica-base/" class="featured-link" target="_blank">Ver site <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card coming-soon">
-                            <div class="project-thumb">
-                                <div class="coming-soon-overlay">
-                                    <div class="wireframe-effect">
-                                        <div class="wireframe-line"></div>
-                                        <div class="wireframe-line"></div>
-                                        <div class="wireframe-line"></div>
-                                        <div class="neon-core">
-                                            <div class="neon-pulse"></div>
-                                            <div class="neon-pulse delay"></div>
-                                        </div>
-                                    </div>
-                                    <span class="coming-soon-label">Em Desenvolvimento</span>
-                                </div>
-                            </div>
-                            <div class="project-info">
-                                <h4 class="project-name">UpFlow</h4>
-                                <span class="project-category">CRM</span>
-                                <p class="coming-soon-desc">
-                                    Um novo padrão em gestão de dados está chegando. 
-                                    Aguarde uma experiência revolucionária que redefine a performance.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card coming-soon">
-                            <div class="project-thumb">
-                                <div class="coming-soon-overlay">
-                                    <div class="wireframe-effect">
-                                        <div class="wireframe-line"></div>
-                                        <div class="wireframe-line"></div>
-                                        <div class="wireframe-line"></div>
-                                        <div class="neon-core red-glow">
-                                            <div class="neon-pulse"></div>
-                                            <div class="neon-pulse delay"></div>
-                                        </div>
-                                    </div>
-                                    <span class="coming-soon-label">Em Breve</span>
-                                </div>
-                            </div>
-                            <div class="project-info">
-                                <h4 class="project-name">???</h4>
-                                <span class="project-category">Confidencial</span>
-                                <p class="coming-soon-desc">
-                                    Uma nova dimensão em automação inteligente. 
-                                    Prepare-se para uma plataforma que antecipa cada movimento do seu negócio.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <p class="hero-description">
+              Somos uma equipe preparada para desenvolver soluções que ajudam
+              empresas a crescer com mais eficiência. Muitas vezes, pequenos
+              problemas nos processos são os responsáveis por reduzir vendas,
+              limitar o crescimento e dificultar a inovação. É justamente aí que
+              entramos. Criamos sistemas de automação, aplicativos, landing
+              pages responsivas e outras soluções tecnológicas personalizadas
+              para otimizar processos, melhorar a experiência dos clientes e
+              impulsionar o desempenho do seu negócio.
+            </p>
 
-        <!-- Contato Section -->
-        <section class="contact" id="contato">
-            <div class="container">
-                <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <div class="contact-header">
-                            <h2 class="contact-title">Vamos Construir o Futuro</h2>
-                            <p class="contact-subtitle">
-                                Entre em contato para uma consultoria técnica personalizada.
-                            </p>
-                        </div>
-                        
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <span class="contact-label">E-mail</span>
-                                    <p class="contact-value">kashmasolucoesti@gmail.com</p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <span class="contact-label">Localização</span>
-                                    <span class="contact-value">São Paulo, SP • Remoto Global</span>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <span class="contact-label">Horário</span>
-                                    <span class="contact-value">Seg-Sexta: 08h às 21h
-                                        <br>Sáb: 08h às 13h
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="social-links"> 
-                            <a href="https://www.instagram.com/kashma.tech/" class="social-link" aria-label="Instagram" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://wa.me/5511951625108" class="social-link" aria-label="WhatsApp" target="_blank">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a href="https://www.facebook.com/people/Kashma/61591519697131/" class="social-link" aria-label="Facebook" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </div>
+            <div class="hero-actions">
+              <a href="#portfolio" class="btn btn-primary btn-angular">
+                <span class="btn-text">Conheça Nosso Trabalho</span>
+                <span class="btn-icon">→</span>
+              </a>
+              <a href="#contato" class="btn btn-outline btn-angular">
+                <span class="btn-text">Fale Conosco</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="tech-grid">
+              <div class="grid-line"></div>
+              <div class="grid-line"></div>
+              <div class="grid-line"></div>
+              <div class="glow-orb blue"></div>
+              <div class="glow-orb red"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-indicator">
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- Serviços Section -->
+      <section class="services" id="servicos">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="title-line"></span>
+              Nossas Soluções de Performance
+              <span class="title-line"></span>
+            </h2>
+            <p class="section-subtitle">
+              Soluções digitais desenvolvidas para impulsionar a performance do
+              seu negócio.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <!-- Sites E-commerces Card -->
+            <div class="service-card" onclick="openSubmenu('ecommerce')">
+              <div class="card-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <div class="icon-glow"></div>
+              </div>
+              <h3 class="card-title">Sites E-commerces</h3>
+              <p class="card-description">
+                Desenvolvemos lojas virtuais rápidas, seguras e preparadas para
+                transformar visitantes em clientes e aumentar suas vendas.
+              </p>
+              <div class="card-accent"></div>
+            </div>
+
+            <!-- Sites Otimizados Card -->
+            <div class="service-card" onclick="openSubmenu('sites')">
+              <div class="card-icon">
+                <i class="fas fa-rocket"></i>
+                <div class="icon-glow"></div>
+              </div>
+              <h3 class="card-title">Sites Otimizados</h3>
+              <p class="card-description">
+                Sites modernos, rápidos e responsivos, desenvolvidos para
+                fortalecer sua marca, transmitir credibilidade e gerar novos
+                negócios.
+              </p>
+              <div class="card-accent"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Submenu - E-commerce -->
+      <div id="submenuEcommerce" class="submenu-modal">
+        <div
+          class="submenu-overlay-bg"
+          onclick="closeSubmenu('ecommerce')"
+        ></div>
+        <div class="submenu-content-box">
+          <div class="submenu-header">
+            <span class="submenu-title">NICHOS E-COMMERCE</span>
+            <span class="submenu-close" onclick="closeSubmenu('ecommerce')"
+              >✕</span
+            >
+          </div>
+          <div class="submenu-body">
+            <div class="submenu-item">
+              <div class="submenu-icon">👗</div>
+              <div class="submenu-info">
+                <h4>Moda & Acessórios</h4>
+                <p>
+                  Lojas de roupa, calçados, joias e acessórios com vitrine
+                  virtual e catálogo interativo.
+                </p>
+              </div>
+            </div>
+            <div class="submenu-item">
+              <div class="submenu-icon">📱</div>
+              <div class="submenu-info">
+                <h4>Eletrônicos & Tecnologia</h4>
+                <p>
+                  Venda de gadgets, computadores e periféricos com filtros
+                  avançados e comparação de produtos.
+                </p>
+              </div>
+            </div>
+            <div class="submenu-item">
+              <div class="submenu-icon">🏠</div>
+              <div class="submenu-info">
+                <h4>Casa & Decoração</h4>
+                <p>
+                  Móveis, decoração e utensílios domésticos com ambientes 3D e
+                  visualização imersiva.
+                </p>
+              </div>
+            </div>
+            <div class="submenu-item">
+              <div class="submenu-icon">💄</div>
+              <div class="submenu-info">
+                <h4>Cosméticos & Beleza</h4>
+                <p>
+                  Produtos de skincare, maquiagem e perfumaria com recomendações
+                  personalizadas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submenu - Sites Otimizados -->
+      <div id="submenuSites" class="submenu-modal">
+        <div class="submenu-overlay-bg" onclick="closeSubmenu('sites')"></div>
+        <div class="submenu-content-box">
+          <div class="submenu-header">
+            <span class="submenu-title">NICHOS DE SITES</span>
+            <span class="submenu-close" onclick="closeSubmenu('sites')">✕</span>
+          </div>
+          <div class="submenu-body">
+            <div class="submenu-item">
+              <div class="submenu-icon">🏥</div>
+              <div class="submenu-info">
+                <h4>Saúde & Bem-estar</h4>
+                <p>
+                  Clínicas, consultórios, estéticas e fisioterapia. Sites que
+                  transmitem confiança e autoridade.
+                </p>
+              </div>
+            </div>
+            <div class="submenu-item">
+              <div class="submenu-icon">🍽️</div>
+              <div class="submenu-info">
+                <h4>Alimentação & Gastronomia</h4>
+                <p>
+                  Restaurantes, pizzarias e food trucks. Cardápios digitais e
+                  integração com delivery.
+                </p>
+              </div>
+            </div>
+            <div class="submenu-item">
+              <div class="submenu-icon">💇</div>
+              <div class="submenu-info">
+                <h4>Beleza & Estética</h4>
+                <p>
+                  Barbearias, salões e clínicas de estética. Agendamento online
+                  e vitrine de serviços.
+                </p>
+              </div>
+            </div>
+            <div class="submenu-item">
+              <div class="submenu-icon">⚖️</div>
+              <div class="submenu-info">
+                <h4>Profissionais Liberais</h4>
+                <p>
+                  Advogados, contadores, arquitetos e psicólogos. Portfólios
+                  profissionais e captação de clientes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sobre a Empresa Section -->
+      <section class="developers" id="sobre-empresa">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="title-line"></span>
+              Sobre a Kashma
+              <span class="title-line"></span>
+            </h2>
+            <p class="section-subtitle">Tecnologia que transforma negócios</p>
+          </div>
+
+          <div class="about-grid">
+            <!-- Missão -->
+            <div class="about-card">
+              <div class="about-icon">
+                <i class="fas fa-bullseye"></i>
+                <div class="icon-glow"></div>
+              </div>
+              <h3 class="about-title">Nossa Missão</h3>
+              <p class="about-description">
+                Desenvolver soluções digitais de alta performance que
+                simplifiquem processos, potencializem resultados e ajudem
+                empresas a crescer com tecnologia de forma estratégica.
+              </p>
+            </div>
+
+            <!-- Visão -->
+            <div class="about-card">
+              <div class="about-icon">
+                <i class="fas fa-eye"></i>
+                <div class="icon-glow"></div>
+              </div>
+              <h3 class="about-title">Nossa Visão</h3>
+              <p class="about-description">
+                Ser reconhecida pela excelência no desenvolvimento de soluções
+                digitais de precisão, entregando inovação, confiança e
+                resultados que fazem a diferença para nossos clientes.
+              </p>
+            </div>
+
+            <!-- Valores -->
+            <div class="about-card">
+              <div class="about-icon">
+                <i class="fas fa-heart"></i>
+                <div class="icon-glow"></div>
+              </div>
+              <h3 class="about-title">Nossos Valores</h3>
+              <p class="about-description">
+                <strong>Precisão:</strong> Desenvolvemos soluções com atenção
+                aos detalhes, garantindo qualidade e desempenho em cada
+                projeto.<br />
+                <strong>Parceria:</strong> Construímos relações de confiança,
+                atuando como uma extensão da equipe dos nossos clientes.<br />
+                <strong>Inovação:</strong> Aplicamos tecnologia de forma
+                estratégica para resolver desafios reais e gerar resultados.<br />
+                <strong>Compromisso:</strong> Cada entrega é conduzida com
+                responsabilidade, transparência e foco no sucesso do cliente.
+              </p>
+            </div>
+          </div>
+
+          <!-- Diferenciais -->
+          <h3 class="diferenciais-title">Por que escolher a Kashma?</h3>
+
+          <div class="diferencial-item">
+            <div class="diferencial-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+
+            <div class="diferencial-info">
+              <h4>Soluções Sob Medida</h4>
+              <p>
+                Cada projeto é desenvolvido de acordo com os objetivos,
+                processos e necessidades do seu negócio.
+              </p>
+            </div>
+          </div>
+
+          <div class="diferencial-item">
+            <div class="diferencial-icon">
+              <i class="fas fa-layer-group"></i>
+            </div>
+
+            <div class="diferencial-info">
+              <h4>Tecnologia Escalável</h4>
+              <p>
+                Sistemas preparados para acompanhar o crescimento da sua empresa
+                sem perder desempenho.
+              </p>
+            </div>
+          </div>
+
+          <div class="diferencial-item">
+            <div class="diferencial-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+
+            <div class="diferencial-info">
+              <h4>Segurança e Confiabilidade</h4>
+              <p>
+                Aplicamos boas práticas de desenvolvimento para garantir
+                estabilidade, proteção e confiança.
+              </p>
+            </div>
+          </div>
+
+          <div class="diferencial-item">
+            <div class="diferencial-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+
+            <div class="diferencial-info">
+              <h4>Parceria de Longo Prazo</h4>
+              <p>
+                Acompanhamos a evolução do seu projeto, oferecendo suporte e
+                melhorias sempre que necessário.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="title-line"></span>
+              Portfólio de Inovação
+              <span class="title-line"></span>
+            </h2>
+            <p class="section-subtitle">
+              Cases que redefinem o padrão de excelência técnica
+            </p>
+          </div>
+
+          <!-- Destaque 1 - Estúdio de tatuagem -->
+          <div class="featured-card" id="featured1">
+            <div class="featured-image">
+              <!-- IMAGEM AQUI - É SÓ TROCAR O CAMINHO -->
+              <img
+                src="./img/estudio-tatuagem.png"
+                alt="Site Estúdio de Tatuagem"
+                class="featured-img"
+              />
+              <div class="featured-badge">Premium</div>
+            </div>
+            <div class="featured-content">
+              <h3 class="featured-title" data-var="--premium-titulo-1">
+                Site institucional para Estúdio de Tatuagens
+              </h3>
+              <p class="featured-description">
+                Um site institucional <strong>Premium</strong> para estúdios de
+                tatuagens, que buscam um aumento em suas vendas e clientes.
+              </p>
+              <div class="featured-stats">
+                <div class="stat-item">
+                  <span class="stat-value">100%</span>
+                  <span class="stat-label">Responsivo</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">Timeline</span>
+                  <span class="stat-label">Otimizada</span>
+                </div>
+              </div>
+              <a
+                href="https://takathecode.github.io/estudio_tatuagem_base/"
+                class="featured-link"
+                target="_blank"
+              >
+                Ver Site
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Todos os Projetos Grid -->
+          <div class="all-projects">
+            <h3 class="projects-grid-title">Todos os Projetos</h3>
+
+            <div class="projects-grid">
+              <!-- Projeto 1 -->
+              <div class="project-card">
+                <div class="project-thumb">
+                  <img
+                    src="./img/foto-dentista.png"
+                    alt="Landing Page Consultório"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-info">
+                  <h4 class="project-name">
+                    Landing page para você doutor que deseja aumentar seus
+                    pacientes
+                  </h4>
+                  <a
+                    href="https://takathecode.github.io/consutorio-base/"
+                    class="featured-link"
+                    target="_blank"
+                    >Ver site <i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- Projeto 2 -->
+              <div class="project-card">
+                <div class="project-thumb">
+                  <img
+                    src="./img/pizzaria-img.png"
+                    alt="Lading page pizzaria"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-info">
+                  <h4 class="project-name">
+                    Uma pizzaria digital, que de maneira controlada e
+                    organizada, aumenta suas vendas
+                  </h4>
+                  <a
+                    href="https://takathecode.github.io/pizzaria-base/"
+                    class="featured-link"
+                    target="_blank"
+                    >Ver site <i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- Projeto 3 -->
+              <div class="project-card">
+                <div class="project-thumb">
+                  <img
+                    src="./img/barbearia-foto.png"
+                    alt="Sistema Barbearia"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-info">
+                  <h4 class="project-name">
+                    Um sistema completo de barbearia para você empreendedor que
+                    busca organização e facilidade
+                  </h4>
+                  <a
+                    href="https://gustavo-machado264.github.io/barbearia-teste/"
+                    class="featured-link"
+                    target="_blank"
+                    >Ver site <i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- Projeto 4 -->
+              <div class="project-card">
+                <div class="project-thumb">
+                  <img
+                    src="./img/studio bella foto.png"
+                    alt="Site Clínica de Estética"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-info">
+                  <h4 class="project-name">
+                    Uma clínica de estética que conquista suas clientes
+                  </h4>
+                  <a
+                    href="https://gustavo-machado264.github.io/clinica-base/"
+                    class="featured-link"
+                    target="_blank"
+                    >Ver site <i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- Projeto 5 - Em Breve (Misterioso) -->
+              <div class="project-card coming-soon">
+                <div class="project-thumb">
+                  <div class="coming-soon-overlay">
+                    <div class="wireframe-effect">
+                      <div class="wireframe-line"></div>
+                      <div class="wireframe-line"></div>
+                      <div class="wireframe-line"></div>
+                      <div class="neon-core">
+                        <div class="neon-pulse"></div>
+                        <div class="neon-pulse delay"></div>
+                      </div>
                     </div>
-                    
-                    <div class="contact-form-container">
+                    <span class="coming-soon-label">Em Desenvolvimento</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h4 class="project-name">UpFlow</h4>
+                  <span class="project-category">CRM</span>
+                  <p class="coming-soon-desc">
+                    Um novo padrão em gestão de dados está chegando. Aguarde uma
+                    experiência revolucionária que redefine a performance.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Projeto 6 - Em Breve (Misterioso) -->
+              <div class="project-card coming-soon">
+                <div class="project-thumb">
+                  <div class="coming-soon-overlay">
+                    <div class="wireframe-effect">
+                      <div class="wireframe-line"></div>
+                      <div class="wireframe-line"></div>
+                      <div class="wireframe-line"></div>
+                      <div class="neon-core red-glow">
+                        <div class="neon-pulse"></div>
+                        <div class="neon-pulse delay"></div>
+                      </div>
+                    </div>
+                    <span class="coming-soon-label">Em Breve</span>
+                  </div>
+                </div>
+                <div class="project-info">
+                  <h4 class="project-name">???</h4>
+                  <span class="project-category">Confidencial</span>
+                  <p class="coming-soon-desc">
+                    Uma nova dimensão em automação inteligente. Prepare-se para
+                    uma plataforma que antecipa cada movimento do seu negócio.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contato Section -->
+      <section class="contact" id="contato">
+        <div class="container">
+          <div class="contact-wrapper">
+            <div class="contact-info">
+              <div class="contact-header">
+                <h2 class="contact-title">Vamos Construir o Futuro</h2>
+                <p class="contact-subtitle">
+                  Entre em contato para uma consultoria técnica personalizada.
+                </p>
+              </div>
+
+              <div class="contact-details">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-text">
+                    <span class="contact-label">E-mail</span>
+                    <p class="contact-value">kashmasolucoesti@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="contact-text">
+                    <span class="contact-label">Localização</span>
+                    <span class="contact-value"
+                      >São Paulo, SP • Remoto Global</span
+                    >
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div class="contact-text">
+                    <span class="contact-label">Horário</span>
+                    <span class="contact-value"
+                      >Seg-Sexta: 08h às 21h <br />Sáb: 10h às 21h
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="social-links">
+                <a
+                  href="https://www.instagram.com/kashma.tech/"
+                  class="social-link"
+                  aria-label="Instagram"
+                  target="_blank"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://wa.me/5511951625108"
+                  class="social-link"
+                  aria-label="WhatsApp"
+                  target="_blank"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/people/Kashma/61591519697131/"
+                  class="social-link"
+                  aria-label="Facebook"
+                  target="_blank"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-form-container">
                         <!-- FORMULÁRIO ATUALIZADO -->
                         <form class="contact-form" id="contactForm">
                             <!-- Nome -->
@@ -530,72 +790,75 @@
                             </button>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <div class="kashma-logo small">
-                        <div class="logo-mark">
-                            <span class="k-icon">K</span>
-                        </div>
-                        <div class="logo-text">
-                            <span class="company-name">KASHMA</span>
-                        </div>
-                    </div>
-                    <p class="footer-tagline">Tecnologia de precisão para negócios extraordinários</p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Navegação</h4>
-                        <ul>
-                            <li><a href="#sobre">Sobre Nós</a></li>
-                            <li><a href="#servicos">Serviços</a></li>
-                            <li><a href="#portfolio">Portfólio</a></li>
-                            <li><a href="#contato">Contato</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Soluções</h4>
-                        <ul>
-                            <li><a href="#">CRM</a></li>
-                            <li><a href="#">SaaS</a></li>
-                            <li><a href="#">Apps</a></li>
-                            <li><a href="#">Landing Pages</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Legal</h4>
-                        <ul>
-                            <li><a href="#">Privacidade</a></li>
-                            <li><a href="#">Termos de Uso</a></li>
-                            <li><a href="#">LGPD</a></li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <div class="kashma-logo small">
+              <div class="logo-mark">
+                <span class="k-icon">K</span>
+              </div>
+              <div class="logo-text">
+                <span class="company-name">KASHMA</span>
+              </div>
             </div>
-            
-            <div class="footer-bottom">
-                <div class="copyright">
-                    <span>© 2026 KASHMA Technologies. Todos os direitos reservados.</span>
-                </div>
-                <div class="footer-signature">
-                    <span class="signature-line"></span>
-                    <span>カシマ • 精度 • 革新</span>
-                    <span class="signature-line"></span>
-                </div>
+            <p class="footer-tagline">
+              Tecnologia de precisão para negócios extraordinários
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Navegação</h4>
+              <ul>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+              </ul>
             </div>
+
+            <div class="footer-column">
+              <h4>Soluções</h4>
+              <ul>
+                <li><a href="#">CRM</a></li>
+                <li><a href="#">SaaS</a></li>
+                <li><a href="#">Apps</a></li>
+                <li><a href="#">Landing Pages</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Legal</h4>
+              <ul>
+                <li><a href="#">Privacidade</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">LGPD</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <div class="copyright">
+            <span
+              >© 2026 KASHMA Technologies. Todos os direitos reservados.</span
+            >
+          </div>
+          <div class="footer-signature">
+            <span class="signature-line"></span>
+            <span>カシマ • 精度 • 革新</span>
+            <span class="signature-line"></span>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
